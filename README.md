@@ -1,4 +1,6 @@
 # Fargate.chat
+## Hands on
+https://medium.com/containers-on-aws/building-a-socket-io-chat-app-and-deploying-it-using-aws-fargate-86fd7cbce13f
 
 [![app](./docs/images/running-app.png)](https://fargate.chat)
 
