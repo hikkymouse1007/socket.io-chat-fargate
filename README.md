@@ -2,6 +2,24 @@
 ## Hands on
 https://medium.com/containers-on-aws/building-a-socket-io-chat-app-and-deploying-it-using-aws-fargate-86fd7cbce13f
 
+## ECS 
+
+- タスク停止
+```
+aws ecs update-service \
+  --service $service_name \
+  --cluster $cluster_name \
+  --desired-count 0
+```
+
+- タスク起動
+```
+aws ecs update-service \
+  --service $service_name \
+  --cluster $cluster_name \
+  --desired-count ${desired_count:-1}
+```
+
 [![app](./docs/images/running-app.png)](https://fargate.chat)
 
 A simple Slack-like chat app built with [Node.js](https://nodejs.org/en/) and [Vue.js](https://vuejs.org/) and deployed using Amazon Web Services, running in Docker containers in [AWS Fargate](https://aws.amazon.com/fargate/).
